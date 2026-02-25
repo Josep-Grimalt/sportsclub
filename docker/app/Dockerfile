@@ -6,6 +6,9 @@ EXPOSE 8080
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
+# Create non-privileged user
+RUN useradd -m -u 1000 -s /bin/bash appuser
+
 # Set work directory
 WORKDIR /app
 
@@ -21,6 +24,12 @@ RUN pip install --no-cache-dir uvicorn
 
 # Copy project
 COPY sportsclub/ .
+
+# Change ownership to appuser
+RUN chown -R appuser:appuser /app
+
+# Switch to non-privileged user
+RUN appuser
 
 # Collect static files (needed when serving through a reverse proxy)
 RUN python manage.py collectstatic --noinput
