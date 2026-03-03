@@ -7,7 +7,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Create non-privileged user
-RUN useradd -m -u 1000 -s /bin/bash appuser
+RUN useradd -m -u 1001 appuser
 
 # Set work directory
 WORKDIR /app
