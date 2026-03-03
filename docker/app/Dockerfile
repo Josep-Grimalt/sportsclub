@@ -29,7 +29,7 @@ COPY sportsclub/ .
 RUN chown -R appuser:appuser /app
 
 # Switch to non-privileged user
-RUN appuser
+USER appuser
 
 # Collect static files (needed when serving through a reverse proxy)
 RUN python manage.py collectstatic --noinput
