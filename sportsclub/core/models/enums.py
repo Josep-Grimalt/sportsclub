@@ -1,8 +1,8 @@
 # core/models/enums.py
-from enum import Enum
+import enum
 
 
-class Discipline(str, Enum):
+class Discipline(enum.StrEnum):
     """Athletic disciplines tracked in competitions."""
 
     SPRINTS = "sprints"
