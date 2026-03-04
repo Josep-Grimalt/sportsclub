@@ -26,5 +26,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
+          file: docker/app/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/sportsclub-app:latest
