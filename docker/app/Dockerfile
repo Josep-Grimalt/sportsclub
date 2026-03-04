@@ -26,7 +26,7 @@ RUN pip install --no-cache-dir uvicorn
 COPY sportsclub/ .
 
 # Collect static files (needed when serving through a reverse proxy)
-# RUN python manage.py collectstatic --noinput
+ RUN python manage.py collectstatic --noinput
 
 # Change ownership to appuser
 RUN chown -R appuser:appuser /app

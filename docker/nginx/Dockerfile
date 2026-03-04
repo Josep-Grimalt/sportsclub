@@ -1,5 +1,5 @@
 # docker/nginx/Dockerfile
-FROM nginx:stable-trixie
+FROM nginx:stable-trixie-perl
 EXPOSE 80
 
 # COPY is relative to the context defined in the `docker-compose.yml` file,
