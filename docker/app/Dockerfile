@@ -1,5 +1,5 @@
 # docker/app/Dockerfile
-FROM python:3.13-slim-trixie
+FROM python:3.13-trixie
 EXPOSE 8080
 
 # Set environment variables
