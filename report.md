@@ -41,3 +41,10 @@ chmod 600 .env.production
 D'aquesta manera, només l'usuari propietari podrà llegir-lo. Aquest mètode és segur perquè evita l'exposició de secrets en repositoris, correus electrònics o canals no xifrats, i s'ajusta a bones pràctiques de gestió de secrets en entorns de producció.
 
 ## Resultat `docker exec <container> whoami`
+```bash
+osboxes@osboxes:~/Documents/sportsclub$ sudo docker exec c2a080725959 whoami
+appuser
+osboxes@osboxes:~/Documents/sportsclub$ sudo docker exec 465d2eb6ec81 whoami
+appuser
+```
+![alt text](docker-exec.png)
