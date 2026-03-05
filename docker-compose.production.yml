@@ -6,14 +6,14 @@ services:
     ports: []
 
   app-blue:
-    image: jotaemege/sportsclub:latest
+    image: jotaemege/sportsclub-app:latest
     restart: unless-stopped
     env_file:
       - .env.production
     ports: []
 
   app-green:
-    image: jotaemege/sportsclub:latest
+    image: jotaemege/sportsclub-app:latest
     restart: unless-stopped
     env_file:
       - .env.production
